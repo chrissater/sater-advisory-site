@@ -24,6 +24,11 @@
         <a href="/contact">Contact</a>
       </nav>
       <a href="/contact" class="nav-cta">Schedule a Call</a>
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
   </header>
 
@@ -205,6 +210,32 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-top">
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-menu-nav" aria-label="Mobile primary">
+        <a href="/about" aria-current="page">About</a>
+        <a href="/valuation">Valuation</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="/contact" class="mobile-menu-cta">Schedule a Discovery Call</a>
+        <div class="mobile-menu-contact">
+          <a href="tel:3185257349"><strong>318.525.7349</strong></a>
+          <a href="mailto:chris@sateradvisory.com">chris@sateradvisory.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 
 </body>
 </html>
