@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidential Valuation — Sater Advisory</title>
+  <meta name="description" content="Request a confidential valuation for your rental business. Personally prepared by Chris Sater. Response within 2-3 business days.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="logo" aria-label="Sater Advisory home">
+        <img src="images/sater-logo.svg" alt="Sater Advisory">
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/about">About</a>
+        <a href="/valuation" aria-current="page">Valuation</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <a href="/contact" class="nav-cta">Schedule a Call</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- VALUATION HERO -->
+    <section class="val-hero">
+      <div class="container">
+        <div class="val-hero-content">
+          <div class="eyebrow">Confidential valuation</div>
+          <h1 class="display-xl">
+            What is your rental business <em>actually worth?</em>
+          </h1>
+          <p class="lede">
+            Tell me about your business below. I will personally prepare a confidential valuation using current rental industry comparables and respond within two to three business days. No fee. No public record. No obligation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="val-form-section">
+      <div class="container">
+        <div class="val-grid">
+
+          <!-- FORM -->
+          <div class="val-form-wrap">
+            <form
+              name="valuation"
+              method="POST"
+              action="/thank-you"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="val-form"
+            >
+              <input type="hidden" name="form-name" value="valuation" />
+              <p class="honeypot">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+
+              <div class="form-row form-row--two">
+                <div class="form-field">
+                  <label for="firstName">First name <span class="req">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                </div>
+                <div class="form-field">
+                  <label for="lastName">Last name <span class="req">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="company">Company name <span class="req">*</span></label>
+                <input type="text" id="company" name="company" required autocomplete="organization">
+              </div>
+
+              <div class="form-row form-row--two">
+                <div class="form-field">
+                  <label for="email">Email <span class="req">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-field">
+                  <label for="phone">Phone <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="segment">Industry segment <span class="req">*</span></label>
+                <select id="segment" name="segment" required>
+                  <option value="">Select an option</option>
+                  <option value="Event Rental">Event Rental</option>
+                  <option value="Construction Equipment Rental">Construction Equipment Rental</option>
+                  <option value="Tool & General Rental">Tool &amp; General Rental</option>
+                  <option value="Specialty Rental">Specialty Rental</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="revenue">Approximate annual revenue <span class="req">*</span></label>
+                <select id="revenue" name="revenue" required>
+                  <option value="">Select a range</option>
+                  <option value="Under $1M">Under $1M</option>
+                  <option value="$1M - $2.5M">$1M – $2.5M</option>
+                  <option value="$2.5M - $5M">$2.5M – $5M</option>
+                  <option value="$5M - $10M">$5M – $10M</option>
+                  <option value="$10M - $25M">$10M – $25M</option>
+                  <option value="$25M+">$25M+</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="timeline">Timeline for considering an exit <span class="req">*</span></label>
+                <select id="timeline" name="timeline" required>
+                  <option value="">Select a timeframe</option>
+                  <option value="Within 6 months">Within 6 months</option>
+                  <option value="6 to 12 months">6 to 12 months</option>
+                  <option value="1 to 2 years">1 to 2 years</option>
+                  <option value="2 to 5 years">2 to 5 years</option>
+                  <option value="Just exploring">Just exploring / not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="notes">Anything else you would like to share <span class="opt">(optional)</span></label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Partner situation, growth notes, customer mix, anything that gives context."></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn-primary btn-block">Send Valuation Request →</button>
+                <p class="form-fineprint">
+                  By submitting, you confirm the information you have shared is accurate and you would like Chris Sater to prepare a confidential valuation. Your information will not be shared with any third party.
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="val-sidebar">
+            <div class="side-card">
+              <div class="side-eyebrow">What happens next</div>
+              <ol class="side-steps">
+                <li>
+                  <span class="step-num">01</span>
+                  <div>
+                    <strong>I personally review</strong>
+                    <span>the information you share. No assistant, no intake team.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="step-num">02</span>
+                  <div>
+                    <strong>I prepare a valuation</strong>
+                    <span>using current rental industry comparables and recent transaction data.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="step-num">03</span>
+                  <div>
+                    <strong>We talk it through</strong>
+                    <span>on your timeline. By phone, by email, or in person.</span>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="side-card side-card--quiet">
+              <div class="side-eyebrow">Prefer to talk first?</div>
+              <p>Call me directly or schedule a 30 minute discovery call. No fee. No public record.</p>
+              <div class="side-actions">
+                <a href="tel:3185257349" class="side-link">
+                  <strong>318.525.7349</strong>
+                </a>
+                <a href="/contact" class="side-link side-link--alt">Schedule a call →</a>
+              </div>
+            </div>
+
+            <div class="side-trust">
+              <span class="trust-pill">Confidential</span>
+              <span class="trust-pill">Operator-led</span>
+              <span class="trust-pill">No obligation</span>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="images/sater-logo-white.svg" alt="Sater Advisory">
+          <p class="footer-desc">
+            Rental industry M&amp;A and exit planning. Confidential. Operator-led. National practice.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/valuation">Valuation</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/contact">Schedule a Call</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Chris Sater</li>
+            <li><a href="tel:3185257349">318.525.7349</a></li>
+            <li><a href="mailto:chris@sateradvisory.com">chris@sateradvisory.com</a></li>
+            <li>PO Box 8511<br>Shreveport, LA 71148</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Sater Advisory. All rights reserved.</div>
+        <div>Chris Sater, Louisiana Licensed Real Estate Agent.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
