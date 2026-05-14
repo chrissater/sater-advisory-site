@@ -120,7 +120,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .section {
-  padding-block: clamp(4rem, 8vw, 8rem);
+  padding-block: clamp(3rem, 6vw, 5.5rem);
   position: relative;
 }
 
@@ -213,8 +213,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 
 .hero {
-  padding-top: clamp(3rem, 8vw, 6rem);
-  padding-bottom: clamp(4rem, 10vw, 8rem);
+  padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  padding-bottom: clamp(3rem, 7vw, 5.5rem);
   overflow: hidden;
 }
 
@@ -337,7 +337,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   grid-template-columns: 1fr 1.4fr;
   gap: 3rem;
   align-items: end;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
 .services-grid {
@@ -409,7 +409,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .operator {
   background: var(--bg-deep);
   color: white;
-  padding-block: clamp(5rem, 10vw, 9rem);
+  padding-block: clamp(3.5rem, 7vw, 6rem);
   position: relative;
   overflow: hidden;
 }
@@ -500,7 +500,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 
 .quote-block {
-  padding-block: clamp(5rem, 9vw, 8rem);
+  padding-block: clamp(3.5rem, 6vw, 5.5rem);
   background: var(--bg-white);
 }
 
@@ -578,7 +578,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 
 .cta-final {
-  padding-block: clamp(5rem, 10vw, 8rem);
+  padding-block: clamp(3.5rem, 7vw, 5.5rem);
   text-align: center;
   background: var(--bg-cream);
 }
@@ -740,8 +740,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 
 .about-hero {
-  padding-top: clamp(3rem, 7vw, 5rem);
-  padding-bottom: clamp(3rem, 6vw, 5rem);
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
   background: var(--bg-cream);
 }
 
@@ -801,11 +801,29 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   object-fit: cover;
 }
 
+/* About hero headline gets a different treatment from the rest of the site's
+   display headlines — Manrope sans-serif so the ampersand renders cleanly */
+.about-hero-headline {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  font-variation-settings: normal;
+}
+
+.about-hero-headline .role-text {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--navy-primary);
+  display: block;
+  margin-top: 0.35em;
+}
+
 /* Long form story */
 
 .story-section {
   background: var(--bg-white);
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
 }
 
 .story-container {
@@ -878,7 +896,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .facts-section {
   background: var(--bg-cream);
-  padding-block: clamp(3rem, 6vw, 5rem);
+  padding-block: clamp(2.5rem, 4.5vw, 4rem);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -925,8 +943,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 
 .val-hero {
-  padding-top: clamp(3rem, 7vw, 5rem);
-  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
   background: var(--bg-cream);
 }
 
@@ -955,7 +973,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .val-form-section {
   background: var(--bg-cream);
-  padding-bottom: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .val-grid {
@@ -1260,8 +1278,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================ */
 
 .contact-hero {
-  padding-top: clamp(3rem, 7vw, 5rem);
-  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
   background: var(--bg-cream);
 }
 
@@ -1291,7 +1309,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* What to expect cards */
 
 .expect-section {
-  padding-block: clamp(2rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
+  padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(2.5rem, 5vw, 4rem);
   background: var(--bg-cream);
 }
 
@@ -1338,14 +1356,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Schedule / Calendly section */
 
 .schedule-section {
-  padding-block: clamp(3rem, 6vw, 5rem);
+  padding-block: clamp(2rem, 4vw, 3.5rem);
   background: var(--bg-white);
 }
 
 .schedule-header {
   text-align: center;
   max-width: 680px;
-  margin: 0 auto clamp(2.5rem, 4vw, 3.5rem);
+  margin: 0 auto clamp(1.75rem, 3vw, 2.5rem);
 }
 
 .schedule-header .display-lg {
@@ -1393,7 +1411,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Direct contact section */
 
 .direct-section {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
   background: var(--bg-deep);
   color: rgba(255, 255, 255, 0.85);
 }
@@ -1469,13 +1487,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .direct-card-value {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 600;
   color: white;
   line-height: 1.2;
   margin-bottom: 0.4rem;
-  font-variation-settings: "opsz" 144;
+  letter-spacing: -0.01em;
 }
 
 .direct-card-note {
