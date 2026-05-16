@@ -801,14 +801,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   object-fit: cover;
 }
 
-/* About hero headline gets a different treatment from the rest of the site's
-   display headlines — Manrope sans-serif so the ampersand renders cleanly */
+/* About hero headline uses the same Fraunces display treatment as the
+   Valuation hero headline, for a consistent look across the site */
 .about-hero-headline {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.02em;
   line-height: 1.05;
-  font-variation-settings: normal;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
 }
 
 .about-hero-headline .role-text {
