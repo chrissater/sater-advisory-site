@@ -1,132 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inquiry Received — Sater Advisory</title>
-  <meta name="description" content="Your listing inquiry has been received. Chris Sater will respond within 1 business day with the NDA and next steps.">
+[build]
+  publish = "."
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Privacy-friendly analytics by Plausible -->
-  <script async src="https://plausible.io/js/pa-tFDTpZ6Ew75LzjVfN3DDI.js"></script>
-  <script>
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
-  </script>
-</head>
-<body>
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="/" class="logo" aria-label="Sater Advisory home">
-        <img src="images/sater-logo.svg" alt="Sater Advisory">
-      </a>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="/about">About</a>
-        <a href="/listings">Listings</a>
-        <a href="/valuation">Valuation</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <a href="/contact" class="nav-cta">Schedule a Call</a>
-      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-  </header>
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-  <main>
-    <section class="thanks-section">
-      <div class="container">
-        <div class="thanks-card">
-          <div class="eyebrow">Inquiry received</div>
-          <h1 class="display-lg">
-            Thank you. <em>I'll be in touch shortly.</em>
-          </h1>
-          <p class="lede">
-            Your inquiry has been received. I will personally review it and respond within one business day with a non-disclosure agreement and the next steps to receive the confidential information memorandum.
-          </p>
-          <p class="thanks-detail">
-            If you would like to talk before then, you can reach me directly at <a href="tel:3185257349"><strong>318.525.7349</strong></a> or <a href="mailto:chris@sateradvisory.com">chris@sateradvisory.com</a>.
-          </p>
-          <div class="thanks-cta">
-            <a href="/listings" class="btn-secondary">← Back to listings</a>
-            <a href="/contact" class="btn-primary">Schedule a Call</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-logo">
-          <img src="images/sater-logo-white.svg" alt="Sater Advisory">
-          <p class="footer-desc">
-            Rental industry M&amp;A and exit planning. Confidential. Operator-led. National practice.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Navigate</h4>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/listings">Listings</a></li>
-            <li><a href="/valuation">Valuation</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/contact">Schedule a Call</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li>Chris Sater</li>
-            <li><a href="tel:3185257349">318.525.7349</a></li>
-            <li><a href="mailto:chris@sateradvisory.com">chris@sateradvisory.com</a></li>
-            <li>PO Box 8511<br>Shreveport, LA 71148</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 Sater Advisory. All rights reserved.</div>
-        <div>Chris Sater, Louisiana Licensed Real Estate Agent.</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Mobile menu overlay -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
-    <div class="mobile-menu-inner">
-      <div class="mobile-menu-top">
-        <button class="mobile-menu-close" aria-label="Close menu">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav class="mobile-menu-nav" aria-label="Mobile primary">
-        <a href="/about">About</a>
-        <a href="/listings">Listings</a>
-        <a href="/valuation">Valuation</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <div class="mobile-menu-footer">
-        <a href="/contact" class="mobile-menu-cta">Schedule a Discovery Call</a>
-        <div class="mobile-menu-contact">
-          <a href="tel:3185257349"><strong>318.525.7349</strong></a>
-          <a href="mailto:chris@sateradvisory.com">chris@sateradvisory.com</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js" defer></script>
-
-</body>
-</html>
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
