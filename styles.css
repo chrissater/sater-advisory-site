@@ -1764,8 +1764,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .about-portrait {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     order: -1;
+  }
+
+  .about-portrait img {
+    object-position: center top;
   }
 
   .pull-quote {
