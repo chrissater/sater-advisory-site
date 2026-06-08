@@ -722,7 +722,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .operator-image {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
+  }
+
+  .operator-image img {
+    object-position: center top;
   }
 
   .industry-strip {
