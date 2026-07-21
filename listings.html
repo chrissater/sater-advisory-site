@@ -16,6 +16,22 @@
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
     plausible.init()
   </script>
+
+  <style>
+    /* Tupelo marketplace embed — scoped to listings page */
+    .tupelo-marketplace-wrap { min-height: 320px; }
+    .tupelo-marketplace-wrap tupelo-marketplace { display: block; width: 100%; }
+    .tupelo-fallback {
+      font-family: var(--font-sans);
+      color: var(--text-muted);
+      background: var(--bg-white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .tupelo-fallback a { color: var(--navy-primary); font-weight: 600; }
+  </style>
 </head>
 <body>
 
@@ -56,43 +72,17 @@
       </div>
     </section>
 
-    <!-- LISTINGS GRID -->
+    <!-- LISTINGS — powered by Tupelo marketplace -->
     <section class="listings-section">
       <div class="container">
-        <div class="listings-grid">
-
-          <!-- LISTING: Equipment Rental, New Orleans Metro -->
-          <a href="/listing-equipment-rental-new-orleans" class="listing-card">
-            <div class="listing-card-status">
-              <span class="status-dot"></span>
-              <span class="status-label">Available</span>
-            </div>
-            <div class="listing-card-eyebrow">Equipment Rental · New Orleans Metro</div>
-            <h2 class="listing-card-title">
-              Established Equipment Rental Business
-            </h2>
-            <div class="listing-card-stats">
-              <div class="card-stat">
-                <span class="card-stat-label">Asking</span>
-                <span class="card-stat-value">$1,400,000</span>
-              </div>
-              <div class="card-stat">
-                <span class="card-stat-label">Revenue</span>
-                <span class="card-stat-value">~$942K</span>
-              </div>
-              <div class="card-stat">
-                <span class="card-stat-label">Cash Flow</span>
-                <span class="card-stat-value">~$285K</span>
-              </div>
-            </div>
-            <p class="listing-card-teaser">
-              Long-established operator with a diverse fleet, loyal customer base, and a highly visible location within a major corridor. Real estate owned and included. Separate land purchase available.
+        <div class="tupelo-marketplace-wrap">
+          <tupelo-marketplace organization-id="cmrtgxpg40000jpti67ak7r0b"></tupelo-marketplace>
+          <noscript>
+            <p class="tupelo-fallback">
+              Current listings load in your browser. Please enable JavaScript, or contact Chris Sater at
+              <a href="tel:3185257349">318.525.7349</a> to discuss available opportunities.
             </p>
-            <div class="listing-card-link">
-              View details and request NDA →
-            </div>
-          </a>
-
+          </noscript>
         </div>
       </div>
     </section>
@@ -216,6 +206,8 @@
     </div>
   </div>
 
+  <!-- Tupelo marketplace widget -->
+  <script src="https://crm.tupelosmb.com/widgets/marketplace/index.js" defer></script>
   <script src="script.js" defer></script>
 
 </body>
